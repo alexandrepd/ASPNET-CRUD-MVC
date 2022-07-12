@@ -1,8 +1,64 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "List of Contacts";
 }
 
+
+
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Project to pratice ASPNET</p>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <a class="btn btn-primary" role="button" asp-controller="Contact" asp-action="CreateContact">Add new contact</a>
+    </div>
+    <br />
+    <h1 class="display-4">List of Contacts</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Alexandre</td>
+                <td>alexandre_pd@hotmail.com</td>
+                <td>+5511984111111</td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <a role="button" class="btn btn-primary" asp-controller="Contact" asp-action="EditContact">Edit</a>
+                        <a role="button" class="btn btn-danger" asp-controller="Contact" asp-action="ConfirmToDeleteContact">Delete</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>James</td>
+                <td>james@hotmail.com</td>
+                <td>+5511984111111</td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <a role="button" class="btn btn-primary" asp-controller="Contact" asp-action="EditContact">Edit</a>
+                        <a role="button" class="btn btn-danger" asp-controller="Contact" asp-action="ConfirmToDeleteContact">Delete</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Rosevelt</td>
+                <td>Rosevelt@hotmail.com</td>
+                <td>+5511984111111</td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <a role="button" class="btn btn-primary" asp-controller="Contact" asp-action="EditContact">Edit</a>
+                        <a role="button" class="btn btn-danger" asp-controller="Contact" asp-action="ConfirmToDeleteContact">Delete</a>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
 </div>

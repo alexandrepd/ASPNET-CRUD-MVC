@@ -1,4 +1,32 @@
-﻿
-@{
-    ViewData["Title"] = "Create contact";
+﻿@{
+    ViewData["Title"] = "Edit contact";
 }
+
+
+
+<div class="text-center">
+
+    <h1 class="display-4">Edit contact</h1>
+</div>
+<form>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" placeholder="Enter name">
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" i placeholder="Enter email">
+    </div>
+
+
+    <div class="form-group">
+        <label for="phone">Phone number</label>
+        <input type="password" class="form-control" placeholder="Enter phone number">
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block">Save</button>
+    <a class="btn btn-secondary  btn-block" asp-controller="Contact" asp-action="Index"> Back</a>
+</form>
+
+

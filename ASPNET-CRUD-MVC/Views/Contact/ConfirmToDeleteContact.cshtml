@@ -1,4 +1,11 @@
 ﻿
 @{
-    ViewData["Title"] = "Create contact";
+    ViewData["Title"] = "Delete contact";
 }
+
+<div class="text-center">
+    <h3> Want to delete this contact?</h3>
+
+</div>
+<a class="btn btn-primary btn-block" asp-controller="Contact" asp-action="ConfirmToDeleteContact"> Confirm delete</a>
+<a class="btn btn-danger btn-block" asp-controller="Contact" asp-action="Index"> Cancel</a>

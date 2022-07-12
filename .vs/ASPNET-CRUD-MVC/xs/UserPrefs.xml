@@ -1,4 +1,34 @@
-﻿<Properties StartupConfiguration="{86D0A0F9-2AE7-4A9F-8A1C-AA17B0F7A6E4}|Default">
-  <MonoDevelop.Ide.ItemProperties.ASPNET-CRUD-MVC FirstBuild="True" />
+﻿<Properties StartupConfiguration="{86D0A0F9-2AE7-4A9F-8A1C-AA17B0F7A6E4}|Default" GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ASPNET-CRUD-MVC/Controllers/ContactController.cs">
+    <Files>
+      <File FileName="ASPNET-CRUD-MVC/Controllers/ContactController.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ASPNET-CRUD-MVC" expanded="True">
+            <Node name="ASPNET-CRUD-MVC" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="ContactController.cs" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Contact" expanded="True" />
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.ASPNET-CRUD-MVC PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
