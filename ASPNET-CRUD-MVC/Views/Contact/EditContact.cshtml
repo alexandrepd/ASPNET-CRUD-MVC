@@ -15,17 +15,20 @@
     <div class="form-group">
         <label for="name">Name</label>
         <input type="text" asp-for="Name" class="form-control" placeholder="Enter name">
+        @Html.ValidationMessageFor(name => name.Name)
     </div>
 
     <div class="form-group">
         <label for="email">Email address</label>
         <input type="email" asp-for="Email" class="form-control" placeholder="Enter email">
+        @Html.ValidationMessageFor(email => email.Email)
     </div>
 
 
     <div class="form-group">
         <label for="phone">Phone number</label>
         <input type="text" asp-for="PhoneNumber" class="form-control" placeholder="Enter phone number">
+        @Html.ValidationMessageFor(phone => phone.PhoneNumber)
     </div>
 
     <button type="submit" class="btn btn-primary btn-block">Save</button>

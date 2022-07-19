@@ -32,15 +32,26 @@ namespace ASPNET_CRUD_MVC.Controllers
         [HttpPost]
         public IActionResult CreateContact(ContactModel contact)
         {
-            _repository.Add(contact);
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                _repository.Add(contact);
+                return RedirectToAction("Index");
+            }
+
+            return View(contact);
+
         }
 
         [HttpPost]
         public IActionResult EditContact(ContactModel contact)
         {
-            _repository.Update(contact);
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                _repository.Update(contact);
+                return RedirectToAction("Index");
+            }
+
+            return View(contact);
         }
 
         public IActionResult EditContact(int id)

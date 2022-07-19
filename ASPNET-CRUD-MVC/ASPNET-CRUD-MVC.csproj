@@ -41,4 +41,12 @@
     <Compile Remove="Migrations\20220712210309_CreateTableContact.cs" />
     <Compile Remove="Migrations\20220712210309_CreateTableContact.Designer.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\css\site.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="wwwroot\css\site.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 </Project>
