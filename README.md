@@ -28,3 +28,8 @@ I called my database as `DatabaseContext` then we need to execute this command i
 after
 
 `Update-Database`
+
+
+
+
+![watching](images/aspnet-mvc-sqlserver.gif)
