@@ -32,26 +32,48 @@ namespace ASPNET_CRUD_MVC.Controllers
         [HttpPost]
         public IActionResult CreateContact(ContactModel contact)
         {
-            if (ModelState.IsValid)
+            try
             {
-                _repository.Add(contact);
+                if (ModelState.IsValid)
+                {
+                    _repository.Add(contact);
+                    TempData["SucessMessage"] = "Contact was stored successfully";
+                    return RedirectToAction("Index");
+                }
+
+
+                return View(contact);
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = $"We have a problem during process to create a contact. Details {ex.Message}";
                 return RedirectToAction("Index");
             }
-
-            return View(contact);
 
         }
 
         [HttpPost]
         public IActionResult EditContact(ContactModel contact)
         {
-            if (ModelState.IsValid)
+
+            try
             {
-                _repository.Update(contact);
+                if (ModelState.IsValid)
+                {
+                    _repository.Update(contact);
+                    TempData["SucessMessage"] = "Contact was updated successfully";
+                    return RedirectToAction("Index");
+                }
+
+
+                return View(contact);
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = $"We have a problem during process to update a contact. Details {ex.Message}";
                 return RedirectToAction("Index");
             }
 
-            return View(contact);
         }
 
         public IActionResult EditContact(int id)
@@ -69,8 +91,24 @@ namespace ASPNET_CRUD_MVC.Controllers
 
         public IActionResult DeleteContact(int id)
         {
-            _repository.Delete(id);
-            return RedirectToAction("Index");
+            try
+            {
+                bool deleted = _repository.Delete(id);
+                if (deleted)
+                {
+                    TempData["SucessMessage"] = "Contact was deleted successfully";
+                }
+                else
+                {
+                    TempData["ErrorMessage"] = "We have a problem during process to delete a contact";
+                }
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = $"We have a problem during process to delete a contact. Details {ex.Message}";
+                return RedirectToAction("Index");
+            }
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
