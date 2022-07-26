@@ -1,8 +1,30 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
-
-// Write your JavaScript code.
-
-$('.close-alert').click(function () {
+﻿$('.close-alert').click(function () {
     $('.alert').hide('hide');
 });
+
+function matchPassword() {
+    var pw1 = document.getElementById("password");
+    var pw2 = document.getElementById("confirm_password");
+
+    isEmpty(pw1);
+
+    isEqual(pw1, pw2);
+
+    return true;
+}
+
+function isEmpty(password) {
+    if (password.value.length == 0) {
+        alert("Password cannot be null");
+        return false;
+    }
+    return true;
+}
+
+function isEqual(password, confirm_password) {
+    if (password.value != confirm_password.value) {
+        alert("Passwords did not match");
+        return false;
+    }
+    return true;
+}
