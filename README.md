@@ -7,6 +7,7 @@ In this project I used the follow technologies:
 - DataAnnotations
 - C#
 - NetCore 6.0
+- JavaScript
 
 # First of all!
 
