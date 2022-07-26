@@ -1,32 +1,13 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{86D0A0F9-2AE7-4A9F-8A1C-AA17B0F7A6E4}|Default">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.ASPNET-CRUD-MVC PreferredExecutionTarget="/Applications/Firefox.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ASPNET-CRUD-MVC/Repository/ContactRepository.cs">
-    <Files>
-      <File FileName="ASPNET-CRUD-MVC/Controllers/ContactController.cs" Line="113" Column="1" />
-      <File FileName="ASPNET-CRUD-MVC/Views/Contact/Index.cshtml" Line="14" Column="1" />
-      <File FileName="ASPNET-CRUD-MVC/Migrations/20220719204633_MyFirstMigration.cs" Line="1" Column="1" />
-      <File FileName="ASPNET-CRUD-MVC/Repository/ContactRepository.cs" Line="44" Column="57" />
-    </Files>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ASPNET-CRUD-MVC" expanded="True">
-            <Node name="ASPNET-CRUD-MVC" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Repository" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="Contact" expanded="True" />
-              </Node>
-              <Node name="wwwroot" expanded="True">
-                <Node name="js" expanded="True" />
-              </Node>
-            </Node>
+            <Node name="ASPNET-CRUD-MVC" expanded="True" />
           </Node>
         </State>
       </Pad>
@@ -35,4 +16,8 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.ASPNET-CRUD-MVC PreferredExecutionTarget="/Applications/Safari.app" />
 </Properties>

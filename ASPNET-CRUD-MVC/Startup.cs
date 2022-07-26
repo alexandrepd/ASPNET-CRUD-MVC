@@ -26,9 +26,11 @@ namespace ASPNET_CRUD_MVC
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddEntityFrameworkSqlServer()
+            services
                 .AddDbContext<DatabaseContext>(db => db.UseSqlServer(Configuration.GetConnectionString("DataBase")));
+
             services.AddScoped<IContactRepository, ContactRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -28,11 +28,13 @@
     <None Remove="Microsoft.EntityFrameworkCore.Tools" />
     <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
     <None Remove="Repository\" />
+    <None Remove="Views\Contact %28copy%29\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Contact\" />
     <Folder Include="Data\" />
     <Folder Include="Repository\" />
+    <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Migrations\20220712205425_CreateTableContact.Designer.cs" />

@@ -7,8 +7,6 @@ using ASPNET_CRUD_MVC.Models;
 using ASPNET_CRUD_MVC.Repository;
 using Microsoft.AspNetCore.Mvc;
 
-// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace ASPNET_CRUD_MVC.Controllers
 {
     public class ContactController : Controller

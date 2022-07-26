@@ -9,6 +9,6 @@ namespace ASPNET_CRUD_MVC.Data
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options) { }
 
         public DbSet<ContactModel> Contact { get; set; }
+        public DbSet<UserModel> User { get; set; }
     }
 }
-
