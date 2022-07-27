@@ -1,13 +1,33 @@
-﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{86D0A0F9-2AE7-4A9F-8A1C-AA17B0F7A6E4}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
+﻿<Properties StartupConfiguration="{86D0A0F9-2AE7-4A9F-8A1C-AA17B0F7A6E4}|Default" GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.ASPNET-CRUD-MVC PreferredExecutionTarget="/Applications/Firefox.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ASPNET-CRUD-MVC/Startup.cs">
+    <Files>
+      <File FileName="ASPNET-CRUD-MVC/Startup.cs" Line="32" Column="49" />
+      <File FileName="ASPNET-CRUD-MVC/Controllers/LoginController.cs" Line="51" Column="71" />
+      <File FileName="ASPNET-CRUD-MVC/Views/Shared/_Layout.cshtml" Line="35" Column="14" />
+      <File FileName="ASPNET-CRUD-MVC/Repository/ILoginRepository.cs" Line="9" Column="19" />
+      <File FileName="ASPNET-CRUD-MVC/Repository/LoginRepository.cs" Line="22" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ASPNET-CRUD-MVC" expanded="True">
-            <Node name="ASPNET-CRUD-MVC" expanded="True" />
+            <Node name="ASPNET-CRUD-MVC" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Repository" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Contact" expanded="True" />
+                <Node name="Login" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>
@@ -16,8 +36,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.ASPNET-CRUD-MVC PreferredExecutionTarget="/Applications/Safari.app" />
 </Properties>

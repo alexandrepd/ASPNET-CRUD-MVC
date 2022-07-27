@@ -5,10 +5,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using ASPNET_CRUD_MVC.Models;
 using ASPNET_CRUD_MVC.Repository;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ASPNET_CRUD_MVC.Controllers
 {
+    [Authorize]
     public class ContactController : Controller
     {
         private readonly IContactRepository _repository;
