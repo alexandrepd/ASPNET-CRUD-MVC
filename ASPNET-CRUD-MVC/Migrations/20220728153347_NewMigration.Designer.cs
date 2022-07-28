@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ASPNET_CRUD_MVC.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20220726153848_NewMigration")]
+    [Migration("20220728153347_NewMigration")]
     partial class NewMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -40,6 +40,16 @@ namespace ASPNET_CRUD_MVC.Migrations
                 {
                     table.PrimaryKey("PK_User", x => x.Id);
                 });
+
+            //adding a admin user to the database after created.
+            String initUser = @"
+INSERT INTO [Db_Contacts].[dbo].[User]
+(UserName,Name, Email,CreatedTimestamp, [Password])
+VALUES
+('admin','Administrator','admin@admin.com', GETDATE(), 'admin')
+";
+
+            migrationBuilder.Sql(initUser);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
