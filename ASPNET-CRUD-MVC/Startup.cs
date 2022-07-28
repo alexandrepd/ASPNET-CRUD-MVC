@@ -29,6 +29,7 @@ namespace ASPNET_CRUD_MVC
             {
                 config.Cookie.Name = "Identity.Login";
                 config.LoginPath = "/Login";
+                //config.ReturnUrlParameter
                 config.AccessDeniedPath = "/Home";
                 config.ExpireTimeSpan = TimeSpan.FromHours(1);
             });
