@@ -28,18 +28,16 @@ namespace ASPNET_CRUD_MVC.Controllers
         {
             if (User.Identity.IsAuthenticated)
             {
-                TempData["SucessMessage"] = "User authenticate";
+                RedirectToAction("/Home");
             }
-            else
-            {
-                TempData["ErrorMessage"] = "User not found or password wrong";
-            }
+
             return View();
         }
 
-
-        public async Task<IActionResult> Login(LoginModel loginModel)
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginModel loginModel, string returnUrl = null)
         {
+
             UserModel userDb = _repository.Login(loginModel);
             if (userDb != null)
             {
@@ -58,7 +56,23 @@ namespace ASPNET_CRUD_MVC.Controllers
                     IsPersistent = false,
                     ExpiresUtc = DateTime.Now.AddHours(1),
                 });
+                TempData["SucessMessage"] = "User authenticate";
+
+
+                if (returnUrl != null)
+                {
+                    return LocalRedirect(returnUrl);
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Home");
+                }
             }
+            else
+            {
+                TempData["ErrorMessage"] = "User not found or password wrong";
+            }
+
             return RedirectToAction("Index");
         }
 
@@ -67,8 +81,10 @@ namespace ASPNET_CRUD_MVC.Controllers
             if (User.Identity.IsAuthenticated)
             {
                 await HttpContext.SignOutAsync();
+                return RedirectToPage("/Home");
             }
-            return RedirectToAction("Index");
+
+            return RedirectToAction("Index", "Home");
         }
     }
 }
