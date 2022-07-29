@@ -1,13 +1,14 @@
 # ASPNET-CRUD-MVC
 
 In this project I used the follow technologies:
-- SQL Server Database
-- Entity Framework(ORM)
-- Razor
-- DataAnnotations
-- C#
-- NetCore 6.0
-- JavaScript
+- [X] SQL Server Database
+- [X] Entity Framework(ORM)
+- [X] Razor
+- [X] DataAnnotations
+- [X] C#
+- [X] NetCore 6.0
+- [X] JavaScript
+- [X] Authentication
 
 # First of all!
 
@@ -30,7 +31,8 @@ after
 
 `Update-Database`
 
+# NEW VERSION! with login!
+![watching](images/ASPNET-CRUD-MVC-SQLSERVER.gif)
 
-
-
+~~OLD-VERSION~~
 ![watching](images/aspnet-mvc-sqlserver.gif)

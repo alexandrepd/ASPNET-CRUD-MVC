@@ -33,7 +33,7 @@ namespace ASPNET_CRUD_MVC.Controllers
         [HttpPost]
         public IActionResult Login(UserModel userModel)
         {
-            UserModel userDb = _repository.GetByLogin(userModel.Name);
+            UserModel userDb = _repository.GetByUserName(userModel.UserName);
             if (userDb != null &&
                 userDb.Name == userModel.Name && userDb.Password == userModel.Password)
             {
@@ -73,7 +73,64 @@ namespace ASPNET_CRUD_MVC.Controllers
                 TempData["ErrorMessage"] = $"We have a problem during process to create a user. Details {ex.Message}";
                 return RedirectToAction("Index");
             }
+        }
 
+        public IActionResult EditUser(int id)
+        {
+            UserModel userModel = _repository.GetById(id);
+            return View(userModel);
+        }
+
+
+        [HttpPost]
+        public IActionResult EditUser(UserModel userModel)
+        {
+
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    _repository.Update(userModel);
+                    TempData["SucessMessage"] = "User was updated successfully";
+                    return RedirectToAction("Index");
+                }
+
+
+                return View(userModel);
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = $"We have a problem during process to update a User. Details {ex.Message}";
+                return RedirectToAction("Index");
+            }
+        }
+
+        public IActionResult ConfirmToDeleteUser(int id)
+        {
+            UserModel userModel = _repository.GetById(id);
+            return View(userModel);
+        }
+
+        public IActionResult DeleteUser(int id)
+        {
+            try
+            {
+                bool deleted = _repository.Delete(id);
+                if (deleted)
+                {
+                    TempData["SucessMessage"] = "Contact was deleted successfully";
+                }
+                else
+                {
+                    TempData["ErrorMessage"] = "We have a problem during process to delete a contact";
+                }
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = $"We have a problem during process to delete a contact. Details {ex.Message}";
+                return RedirectToAction("Index");
+            }
         }
     }
 }

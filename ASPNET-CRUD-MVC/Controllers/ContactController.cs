@@ -52,6 +52,13 @@ namespace ASPNET_CRUD_MVC.Controllers
 
         }
 
+        public IActionResult EditContact(int id)
+        {
+            ContactModel model = _repository.GetById(id);
+            return View(model);
+        }
+
+
         [HttpPost]
         public IActionResult EditContact(ContactModel contact)
         {
@@ -76,11 +83,6 @@ namespace ASPNET_CRUD_MVC.Controllers
 
         }
 
-        public IActionResult EditContact(int id)
-        {
-            ContactModel model = _repository.GetById(id);
-            return View(model);
-        }
 
 
         public IActionResult ConfirmToDeleteContact(int id)

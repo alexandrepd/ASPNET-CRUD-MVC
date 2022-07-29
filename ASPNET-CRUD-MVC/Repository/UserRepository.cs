@@ -22,9 +22,9 @@ namespace ASPNET_CRUD_MVC.Repository
             return userModel;
         }
 
-        public bool Delete(String login)
+        public bool Delete(int id)
         {
-            UserModel userDb = GetByLogin(login);
+            UserModel userDb = GetById(id);
             if (userDb == null) throw new System.Exception("error during User delete");
 
             _databaseContext.User.Remove(userDb);
@@ -37,14 +37,20 @@ namespace ASPNET_CRUD_MVC.Repository
             return _databaseContext.User.ToList();
         }
 
-        public UserModel GetByLogin(String login)
+        public UserModel GetById(int Id)
         {
-            return _databaseContext.User.FirstOrDefault(a => a.Name == login);
+            return _databaseContext.User.FirstOrDefault(a => a.Id == Id);
         }
+
+        public UserModel GetByUserName(String UserName)
+        {
+            return _databaseContext.User.FirstOrDefault(a => a.UserName == UserName);
+        }
+
 
         public UserModel Update(UserModel userModel)
         {
-            UserModel userDb = GetByLogin(userModel.Name);
+            UserModel userDb = GetByUserName(userModel.UserName);
             if (userDb == null) throw new System.Exception("error during user update");
 
 
