@@ -1,6 +1,6 @@
 ﻿@model ContactModel
 @{
-    ViewData["Title"] = "Edit contact";
+    ViewData["Title"] = "Edit User";
 }
 
 <div class="text-center">
@@ -26,13 +26,13 @@
 
 
     <div class="form-group">
-        <label for="phone">Phone number</label>
+        <label for="PhoneNumber">PhoneNumber</label>
         <input type="text" asp-for="PhoneNumber" class="form-control" placeholder="Enter phone number">
-        @Html.ValidationMessageFor(phone => phone.PhoneNumber)
+        @Html.ValidationMessageFor(PhoneNumber => PhoneNumber.PhoneNumber)
     </div>
 
     <button type="submit" class="btn btn-primary btn-block">Save</button>
-    <a class="btn btn-secondary  btn-block" asp-controller="Contact" asp-action="Index"> Back</a>
+    <a class="btn btn-secondary  btn-block" asp-controller="User" asp-action="Index"> Back</a>
 </form>
 
 

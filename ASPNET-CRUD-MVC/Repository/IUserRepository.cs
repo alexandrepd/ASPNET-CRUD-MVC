@@ -7,9 +7,10 @@ namespace ASPNET_CRUD_MVC.Repository
     public interface IUserRepository
     {
         UserModel Add(UserModel userModel);
-        UserModel GetByLogin(String login);
+        UserModel GetById(int Id);
+        UserModel GetByUserName(String UserName);
         UserModel Update(UserModel userModel);
-        bool Delete(String login);
+        bool Delete(int Id);
 
         List<UserModel> GetAll();
     }
